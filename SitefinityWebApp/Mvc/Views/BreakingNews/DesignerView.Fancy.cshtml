@@ -1,0 +1,12 @@
+﻿<div>
+    <label>Date: </label>
+    <input type="text" ng-model="properties.Date.PropertyValue" ng-change="buildBreakingNewsMessage()" />
+</div>
+<div>
+    <label>Message: </label>
+    <textarea rows="3" ng-model="properties.Message.PropertyValue" ng-change="buildBreakingNewsMessage()" />
+</div>
+<div>
+    <label>Final Message: </label>
+    <textarea rows="3" ng-model="properties.BreakingNewsMessage.PropertyValue" ng-disabled="true" />
+</div>
