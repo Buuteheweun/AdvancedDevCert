@@ -726,12 +726,7 @@
     <Reference Include="Telerik.Sitefinity.Utilities, Version=9.0.6013.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
       <HintPath>..\packages\Telerik.Sitefinity.Core.9.0.6013.0\lib\net40\Telerik.Sitefinity.Utilities.dll</HintPath>
       <Private>True</Private>
-    </Reference>
-    <Reference Include="RazorGenerator.Templating">
-      <HintPath>bin\RazorGenerator.Templating.dll</HintPath>
-      <SpecificVersion>False</SpecificVersion>
-      <Private>True</Private>
-    </Reference>
+    </Reference>   
     <!-- The reference to Telerik.Sitefinity.Audit.ElasticSearch comes from integration build with GIT. 
 	     The module also requires references to Elasticsearch.Net.dll and NEST.dll
 		 The source and additional info of the module can be found on the following Git repository:
@@ -803,12 +798,7 @@
     <Reference Include="Telerik.Windows.Zip, Version=2015.1.225.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
       <HintPath>..\packages\Telerik.Sitefinity.Windows.Controls.2015.1.225.40\lib\net40\Telerik.Windows.Zip.dll</HintPath>
       <Private>True</Private>
-    </Reference>
-    <Reference Include="RazorGenerator.Mvc">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\RazorGenerator.Mvc.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
+    </Reference>    
     <Reference Include="Twitterizer2, Version=2.4.1.27318, Culture=neutral, PublicKeyToken=69d1469eac671567, processorArchitecture=MSIL">
       <HintPath>..\packages\Telerik.Sitefinity.Twitterizer.2.4.1\lib\net40\Twitterizer2.dll</HintPath>
       <Private>True</Private>
