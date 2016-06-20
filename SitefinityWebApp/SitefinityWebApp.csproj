@@ -12,6 +12,7 @@
     <EnhancerAssembly>$(SolutionDir)\packages\Telerik.DataAccess.Fluent.2016.1.224.1\tools\enhancer\enhancer.exe</EnhancerAssembly>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">.\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -726,7 +727,7 @@
     <Reference Include="Telerik.Sitefinity.Utilities, Version=9.0.6013.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
       <HintPath>..\packages\Telerik.Sitefinity.Core.9.0.6013.0\lib\net40\Telerik.Sitefinity.Utilities.dll</HintPath>
       <Private>True</Private>
-    </Reference>   
+    </Reference>
     <!-- The reference to Telerik.Sitefinity.Audit.ElasticSearch comes from integration build with GIT. 
 	     The module also requires references to Elasticsearch.Net.dll and NEST.dll
 		 The source and additional info of the module can be found on the following Git repository:
@@ -798,7 +799,7 @@
     <Reference Include="Telerik.Windows.Zip, Version=2015.1.225.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
       <HintPath>..\packages\Telerik.Sitefinity.Windows.Controls.2015.1.225.40\lib\net40\Telerik.Windows.Zip.dll</HintPath>
       <Private>True</Private>
-    </Reference>    
+    </Reference>
     <Reference Include="Twitterizer2, Version=2.4.1.27318, Culture=neutral, PublicKeyToken=69d1469eac671567, processorArchitecture=MSIL">
       <HintPath>..\packages\Telerik.Sitefinity.Twitterizer.2.4.1\lib\net40\Twitterizer2.dll</HintPath>
       <Private>True</Private>
@@ -814,12 +815,13 @@
     <Compile Include="Mvc\Controllers\BreakingNewsController.cs" />
     <Compile Include="Mvc\Models\BreakingNewsModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\CustomMembershipProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ClientBin\Telerik.Sitefinity.Analytics.xap" />
     <Content Include="ClientBin\Telerik.Sitefinity.Silverlight.xap" />
     <Content Include="Default.aspx" />
-    <Content Include="Mvc\Scripts\BreakingNews\DesignerView-Fancy.js" />
+    <EmbeddedResource Include="Mvc\Scripts\BreakingNews\DesignerView-Fancy.js" />
     <Content Include="ResourcePackages\Bootstrap\assets\dist\css\styles.css" />
     <Content Include="ResourcePackages\Bootstrap\assets\dist\css\styles.min.css" />
     <Content Include="ResourcePackages\Bootstrap\assets\dist\fonts\sf-icon-font.svg" />
@@ -1177,7 +1179,9 @@
     <Content Include="App_Data\Sitefinity\Configuration\PersonalizationConfig.config" />
     <Content Include="App_Data\Sitefinity\Configuration\ProjectConfig.config" />
     <Content Include="App_Data\Sitefinity\Configuration\SearchConfig.config" />
-    <Content Include="App_Data\Sitefinity\Configuration\SecurityConfig.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\SecurityConfig.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\Sitefinity\Configuration\SystemConfig.config" />
     <Content Include="App_Data\Sitefinity\Configuration\ToolboxesConfig.config" />
     <Content Include="App_Data\Sitefinity\Configuration\TranslationsConfig.config" />
