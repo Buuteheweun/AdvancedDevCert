@@ -1,9 +1,9 @@
 ﻿using SitefinityWebApp.Mvc.Models;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
+using Telerik.Sitefinity.Abstractions;
+using Telerik.Sitefinity.Modules.News;
 using Telerik.Sitefinity.Mvc;
 
 namespace SitefinityWebApp.Mvc.Controllers
@@ -21,7 +21,17 @@ namespace SitefinityWebApp.Mvc.Controllers
         public ActionResult Index()
         {
             var model = new BreakingNewsModel();
-            model.BreakingNewsMessage = this.BreakingNewsMessage;
+
+            if(this.BreakingNewsMessage.IsNullOrEmpty())
+            {
+                var newsManager = ObjectFactory.Resolve<ManagerFactory<NewsManager>>().GetManager();
+                var newsItem = newsManager.GetNewsItems().FirstOrDefault();
+                model.BreakingNewsMessage = newsItem.Title;
+            }
+            else
+            {
+                model.BreakingNewsMessage = this.BreakingNewsMessage;
+            }            
 
             return View(model);
         }
