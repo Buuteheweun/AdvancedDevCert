@@ -1,5 +1,5 @@
 ﻿angular.module('designer')
-    .controller('FancyCtrl', ['$scope', 'properyService', function ($scope, properyService) {
+    .controller('FancyCtrl', ['$scope', 'propertyService', function ($scope, propertyService) {
         $scope.feedback.showLoadingIndicator = true;
 
         // Get widget properies and load them in the controller's scope
