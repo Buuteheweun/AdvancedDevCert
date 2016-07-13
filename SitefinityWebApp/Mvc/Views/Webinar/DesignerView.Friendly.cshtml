@@ -1,0 +1,27 @@
+﻿@* SitefinityWebapp\Mvc\Views\Webinar\DesignerView.Friendly.cshtml *@
+
+<div>
+    <label>Webinar title: </label>
+    <input type="text" ng-model="properties.Title.PropertyValue" />
+</div>
+<div>
+    <label>Description: </label>
+    <input type="text" ng-model="properties.Description.PropertyValue" />
+</div>
+<div>
+    <label>Webinar starts at: </label>
+    <!-- input of type date will not work in IE and Firefox. Use Chrome, or Edge to see the result -->
+    <input type="date" ng-model="properties.Start.PropertyValue" />
+</div>
+<div>
+    <label>Webinar ends at: </label>
+    <!-- input of type date will not work in IE and Firefox. Use Chrome, or Edge to see the result -->
+    <input type="date" ng-model="properties.End.PropertyValue" />
+</div>
+
+<div>
+    <sf-list-selector sf-dynamic-items-selector 
+                      sf-item-type="itemType" 
+                      sf-master="true" 
+                      sf-selected-item="selectedItem" />
+</div>

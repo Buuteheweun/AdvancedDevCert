@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿// SitefinityWebapp\Mvc\Models\BreakingNewsModel.cs
 
 namespace SitefinityWebApp.Mvc.Models
 {
     public class BreakingNewsModel
     {
-        public string BreakingNewsMessage { get; set; }
+        public string Message { get; set; }
     }
 }

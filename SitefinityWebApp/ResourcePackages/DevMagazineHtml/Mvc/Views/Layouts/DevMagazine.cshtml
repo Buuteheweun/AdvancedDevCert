@@ -1,0 +1,97 @@
+﻿@* SitefinityWebApp\ResourcePackages\DevMagazineHtml\Mvc\Views\Layouts\DevMagazine.cshtml *@
+
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta @Html.RenderLangAttribute() />
+    <title></title>
+    <link rel="stylesheet" href="~/ResourcePackages/DevMagazineHtml/assets/dist/css/styles.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @Html.Section("head")
+</head>
+
+<body>
+    @Html.Section("top")
+
+    <div class="navbar navbar-default js-nav-fixed">
+        <div class="container-fluid">
+            <div class="pull-right Search">
+                <label class="glyphicon glyphicon-search"></label>
+                <input type="search" class="js-search-field ui-autocomplete-input" value="" autocomplete="off">
+                <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+            </div>
+
+            <nav role="navigation">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="Home.html">DevMagazine</a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+                        <ul class="nav navbar-nav">
+                            <li><a href="Topic.html">.NET</a></li>
+                            <li><a href="Topic.html">Web</a></li>
+                            <li><a href="Topic.html">Testing</a></li>
+                            <li><a href="Topic.html">Cloud</a></li>
+                            <li><a href="Topic.html">Desktop</a></li>
+                            <li><a href="Topic.html">Mobile</a></li>
+                            <li class="pull-right"><a href="Events.html">Events</a></li>
+                            <li class="pull-right"><a href="Issues.html">Issues</a></li>
+                        </ul>
+
+                    </div>
+                    <!-- /.navbar-collapse -->
+
+                </div>
+                <!-- /.container-fluid -->
+            </nav>
+        </div>
+
+    </div>
+    <div class="Main-content section">
+        @Html.SfPlaceHolder("MainSections")
+
+        <section class="section">
+            <div class="container">
+
+                <h4 class="text-center">Follow us</h4>
+
+                <ul class="Social list-unstyled">
+                    <li>
+                        <a href="" class="icon-facebook"></a>
+                    </li>
+                    <li>
+                        <a href="" class="icon-twitter"></a>
+                    </li>
+                    <li>
+                        <a href="" class="icon-google"></a>
+                    </li>
+                    <li>
+                        <a href="" class="icon-linkedin"></a>
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+
+    </div>
+
+    <script src="~/ResourcePackages/DevMagazineHtml/assets/dist/js/all.min.js"></script>
+
+    @Html.Section("bottom")
+</body>
+
+</html>

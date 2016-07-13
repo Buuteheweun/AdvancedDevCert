@@ -1,7 +1,14 @@
-﻿@model SitefinityWebApp.Mvc.Models.BreakingNewsModel
+﻿@* SitefinityWebapp\Mvc\Views\BreakingNews\Index.cshtml *@
 
+@model SitefinityWebApp.Mvc.Models.BreakingNewsModel
+
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers
+
+<p>
+    @Html.Resource("StaticMessage")
+</p>
 <marquee>
 
-    @Html.Raw(Model.BreakingNewsMessage)
+    @Html.Raw(Model.Message)
 
 </marquee>

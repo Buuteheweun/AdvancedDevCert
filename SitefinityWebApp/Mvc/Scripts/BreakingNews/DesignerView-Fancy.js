@@ -1,4 +1,8 @@
-﻿angular.module('designer')
+﻿// SitefinityWebapp\Mvc\Scripts\BreakingNews\DesignerView-Fancy.js
+
+angular.module('designer').requires.push('sfSelectors');
+
+angular.module('designer')
     .controller('FancyCtrl', ['$scope', 'propertyService', function ($scope, propertyService) {
         $scope.feedback.showLoadingIndicator = true;
 
@@ -23,4 +27,16 @@
         $scope.buildBreakingNewsMessage = function () {
             $scope.properties.BreakingNewsMessage.PropertyValue = $scope.properties.Date.PropertyValue + ' : ' + $scope.properties.Message.PropertyValue;
         };
+
+        $scope.$watch('properties.SelectedItem.PropertyValue', function (newValue, oldValue) {
+            if (newValue) {
+                $scope.selectedItem = JSON.parse(newValue);
+            }
+        });
+
+        $scope.$watch('selectedItem', function (newValue, oldValue) {
+            if (newValue) {
+                $scope.properties.SelectedItem.PropertyValue = JSON.stringify(newValue);
+            }
+        });
     }]);

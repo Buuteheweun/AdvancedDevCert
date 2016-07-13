@@ -1,10 +1,9 @@
-﻿using System;
+﻿// SitefinityWebApp\Providers\CustomMembershipProvider.cs
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using Telerik.Sitefinity.Data;
-using Telerik.Sitefinity.Lifecycle;
 using Telerik.Sitefinity.Model;
-using Telerik.Sitefinity.News.Model;
 using Telerik.Sitefinity.Security.Data;
 using Telerik.Sitefinity.Security.Model;
 
@@ -12,21 +11,6 @@ namespace SitefinityWebApp.Providers
 {
     public class CustomMembershipProvider : MembershipDataProvider
     {
-        public override User CreateUser(string userName)
-        {
-            throw new NotImplementedException();
-        }
-
-        public override User CreateUser(Guid id, string userName)
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void Delete(User item)
-        {
-            throw new NotImplementedException();
-        }
-
         public override User GetUser(Guid id)
         {
             return this.GetUsers().First(u => u.Id == id);
@@ -61,9 +45,24 @@ namespace SitefinityWebApp.Providers
             return new List<User>()
             {
                 user1,
-                user2                
+                user2
             }
             .AsQueryable();
+        }
+
+        public override User CreateUser(string userName)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override User CreateUser(Guid id, string userName)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void Delete(User item)
+        {
+            throw new NotImplementedException();
         }
     }
 }
