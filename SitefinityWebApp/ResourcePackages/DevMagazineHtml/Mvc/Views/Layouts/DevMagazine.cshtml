@@ -18,11 +18,6 @@
 
     <div class="navbar navbar-default js-nav-fixed">
         <div class="container-fluid">
-            <div class="pull-right Search">
-                <label class="glyphicon glyphicon-search"></label>
-                <input type="search" class="js-search-field ui-autocomplete-input" value="" autocomplete="off">
-                <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
-            </div>
 
             <nav role="navigation">
                 <div class="container-fluid">
@@ -42,14 +37,11 @@
 
 
                         <ul class="nav navbar-nav">
-                            <li><a href="Topic.html">.NET</a></li>
-                            <li><a href="Topic.html">Web</a></li>
-                            <li><a href="Topic.html">Testing</a></li>
-                            <li><a href="Topic.html">Cloud</a></li>
-                            <li><a href="Topic.html">Desktop</a></li>
-                            <li><a href="Topic.html">Mobile</a></li>
-                            <li class="pull-right"><a href="Events.html">Events</a></li>
-                            <li class="pull-right"><a href="Issues.html">Issues</a></li>
+                            <li><a href="Topic.html">.NET&nbsp<small><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></small></a></li>
+                            <li><a href="Topic.html">Web&nbsp<small><span class="glyphicon glyphicon-star"></span></small></a></li>
+                            <li><a href="Topic.html">Testing&nbsp<small><span class="glyphicon glyphicon-star"></span></small></a></li>
+                            <li><a href="Topic.html">Mobile&nbsp<small><span class="glyphicon glyphicon-star"></span></small></a></li>
+
                         </ul>
 
                     </div>
@@ -59,8 +51,8 @@
                 <!-- /.container-fluid -->
             </nav>
         </div>
-
     </div>
+
     <div class="Main-content section">
         @Html.SfPlaceHolder("MainSections")
 
