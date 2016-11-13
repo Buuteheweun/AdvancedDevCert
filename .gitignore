@@ -8,6 +8,7 @@
 /SitefinityWebApp/App_Data/Sitefinity/Logs
 /SitefinityWebApp/App_Data/Sitefinity/Sitefinity.lic
 /SitefinityWebApp/App_Data/appStatusReport.html
+/SitefinityWebApp/packages
 /packages
 *.suo
 /.vs/config/applicationhost.config

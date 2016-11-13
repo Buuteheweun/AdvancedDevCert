@@ -110,6 +110,12 @@
 
     > li {
       display:block;
+      width: 100%;
+      border-bottom: #ebebec;
+
+      > a {
+         float: left;
+      }
     }
   }
 }
